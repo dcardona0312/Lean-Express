@@ -13,18 +13,15 @@
 
 <div class="layout">
 
-  <!-- SIDEBAR -->
   <aside class="sidebar">
 
     <div>
-
       <div class="logo-box">
         <img src="../LogoCyberpyme.png" class="logo">
       </div>
 
       <h2>CyberPyme</h2>
       <p>Panel Administrativo</p>
-
     </div>
 
     <button onclick="logout()" class="logout-btn">
@@ -33,9 +30,6 @@
 
   </aside>
 
-
-
-  <!-- CONTENIDO -->
   <main class="content">
 
     <div class="topbar">
@@ -45,9 +39,7 @@
 
     <div class="grid">
 
-      <!-- CREAR EMPRESA -->
       <div class="card">
-
         <h3>Crear Empresa</h3>
 
         <input id="newNombre" placeholder="Nombre empresa">
@@ -55,11 +47,8 @@
         <input id="newPassword" type="password" placeholder="Contraseña temporal">
 
         <button onclick="crearUsuario()">Crear Usuario</button>
-
       </div>
 
-
-      <!-- RESUMEN -->
       <div class="card stats">
 
         <div class="stat-box">
@@ -74,8 +63,6 @@
 
       </div>
 
-
-      <!-- HISTORIAL -->
       <div class="card full">
 
         <h3>Historial de Diagnósticos</h3>
@@ -84,8 +71,8 @@
           <thead>
             <tr>
               <th>Empresa</th>
-              <th>Nivel</th>
-              <th>Total</th>
+              <th>Estado</th>
+              <th>Riesgo</th>
               <th>Fecha</th>
               <th>Acción</th>
             </tr>
@@ -96,15 +83,13 @@
 
       </div>
 
-
-      <!-- DETALLE -->
       <div class="card full detalle-card">
 
         <div class="detalle-header">
 
           <div>
             <h3>Detalle del Diagnóstico</h3>
-            <p>Análisis técnico del resultado seleccionado</p>
+            <p>Evaluación basada en ISO 27032</p>
           </div>
 
           <span class="badge-detalle" id="estadoDetalle">
@@ -113,29 +98,21 @@
 
         </div>
 
-
         <div class="detalle-grid">
 
-          <!-- GRAFICA -->
           <div class="detalle-panel grafica-panel">
             <canvas id="detalleGrafica"></canvas>
           </div>
 
-          <!-- INFO -->
           <div class="detalle-panel info-panel">
-
             <div id="detalleInfo" class="detalle-info">
 
               <div class="empty-state">
                 <h4>Selecciona un diagnóstico</h4>
-                <p>
-                  Haz clic en <strong>Ver más</strong> dentro del historial para
-                  visualizar el detalle completo del resultado.
-                </p>
+                <p>Haz clic en <strong>Ver más</strong></p>
               </div>
 
             </div>
-
           </div>
 
         </div>
