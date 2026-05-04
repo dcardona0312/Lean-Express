@@ -2,260 +2,252 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CyberPyme - Empresa</title>
 <link rel="stylesheet" href="preguntas.css">
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header class="topbar">
-
   <div class="brand">
     <img src="../LogoCyberpyme.png" class="logo">
-
     <div>
       <h2>CyberPyme</h2>
       <span>Portal Empresarial</span>
     </div>
   </div>
 
-  <button onclick="logout()" class="logout-btn">
-    Cerrar sesión
-  </button>
-
+  <button onclick="logout()" class="logout-btn">Cerrar sesión</button>
 </header>
 
-
-<!-- CONTENIDO -->
 <main class="main">
 
-  <div class="wrapper">
+<div class="wrapper">
 
-    <!-- PANEL IZQUIERDO -->
-    <section class="intro-card">
+<!-- IZQUIERDA -->
+<section class="intro-card">
 
-      <h1>Diagnóstico de Ciberseguridad</h1>
+<h1>Diagnóstico de Ciberseguridad</h1>
 
-      <p>
-        Evalúa el nivel de madurez tecnológica de tu empresa con base en el marco
-        <strong>NIST Cybersecurity Framework</strong>, enfocándonos en las funciones:
-        <strong>Identificar</strong> y <strong>Proteger</strong>.
-      </p>
+<p>
+Evaluación basada en ISO 27032 enfocada en contexto, identificación y protección.
+</p>
 
-      <div class="tips">
+<div class="tips">
+<div class="tip"><h3>Contexto</h3><span>Activos y operación</span></div>
+<div class="tip"><h3>Identificar</h3><span>Riesgos y amenazas</span></div>
+<div class="tip"><h3>Proteger</h3><span>Controles de seguridad</span></div>
+</div>
 
-        <div class="tip">
-          <h3>Identificar</h3>
-          <span>
-            Inventario de activos, procesos críticos, datos sensibles y riesgos.
-          </span>
-        </div>
-
-        <div class="tip">
-          <h3>Proteger</h3>
-          <span>
-            Controles como accesos, antivirus, backups y seguridad operativa.
-          </span>
-        </div>
-
-        <div class="tip">
-          <h3>Resultado</h3>
-          <span>
-            El resultado será visible en el panel del administrador.
-          </span>
-        </div>
-
-      </div>
-
-    </section>
+</section>
 
 
-    <!-- PANEL DERECHO -->
-    <section class="form-card">
+<!-- DERECHA -->
+<section class="form-card">
 
-      <h2>Responder diagnóstico</h2>
+<h2>Responder diagnóstico</h2>
 
-      <div class="questions-box">
+<div class="questions-box">
 
-        <!-- PERFIL EMPRESA -->
-        <div class="question">
-          <label>1. ¿Cuál es el tamaño actual de la empresa según cantidad de colaboradores que utilizan recursos tecnológicos (equipos, correo, sistemas)?</label>
-          <select id="p1">
-            <option value="0">1 a 5 colaboradores</option>
-            <option value="1">6 a 20 colaboradores</option>
-            <option value="2">21 o más colaboradores</option>
-          </select>
-        </div>
+<!-- ================= CONTEXTO EMPRESA ================= -->
+<h3>Contexto Empresarial y Activos</h3>
 
-        <div class="question">
-          <label>2. ¿Cuántos activos tecnológicos utilizan actualmente para operar (computadores, portátiles, celulares corporativos, impresoras, servidores, tablets)?</label>
-          <select id="p2">
-            <option value="0">1 a 5 activos</option>
-            <option value="1">6 a 15 activos</option>
-            <option value="2">16 o más activos</option>
-          </select>
-        </div>
+<div class="question">
+<label>1. ¿Cuál es el tamaño de la empresa en términos de usuarios que acceden a sistemas tecnológicos?</label>
+<select id="p1">
+<option value="0">Menos de 5 usuarios</option>
+<option value="1">Entre 5 y 20 usuarios</option>
+<option value="2">Más de 20 usuarios</option>
+</select>
+</div>
 
-        <div class="question">
-          <label>3. ¿Qué tipo de red utiliza principalmente la empresa para conectarse a internet y compartir recursos internos?</label>
-          <select id="p3">
-            <option value="0">WiFi doméstico sin administración</option>
-            <option value="1">WiFi empresarial básico</option>
-            <option value="2">Red cableada / segmentada / administrada</option>
-          </select>
-        </div>
+<div class="question">
+<label>2. ¿Cuántos dispositivos tecnológicos (PC, laptops, móviles) están en uso activo?</label>
+<select id="p2">
+<option value="0">Menos de 5</option>
+<option value="1">Entre 5 y 15</option>
+<option value="2">Más de 15</option>
+</select>
+</div>
 
-        <div class="question">
-          <label>4. ¿La empresa permite trabajo remoto o acceso desde casa a correos, archivos o sistemas internos?</label>
-          <select id="p4">
-            <option value="0">Sí, sin controles definidos</option>
-            <option value="1">Sí, con controles básicos</option>
-            <option value="2">Sí, con VPN o acceso seguro</option>
-          </select>
-        </div>
+<div class="question">
+<label>3. ¿Qué tipo de infraestructura de red utiliza la empresa para sus operaciones?</label>
+<select id="p3">
+<option value="0">Red doméstica o sin segmentación</option>
+<option value="1">Red empresarial básica (WiFi + cable)</option>
+<option value="2">Red administrada con segmentación (VLAN, firewall, etc.)</option>
+</select>
+</div>
 
-        <!-- IDENTIFICAR -->
-        <div class="question">
-          <label>5. ¿La empresa cuenta con un inventario actualizado de equipos tecnológicos indicando responsable, ubicación y estado?</label>
-          <select id="p5">
-            <option value="0">No existe inventario</option>
-            <option value="1">Existe parcialmente</option>
-            <option value="2">Sí, actualizado periódicamente</option>
-          </select>
-        </div>
+<div class="question">
+<label>4. ¿Cómo se gestiona el acceso remoto a los sistemas de la empresa?</label>
+<select id="p4">
+<option value="0">Sin control o acceso libre</option>
+<option value="1">Acceso con credenciales básicas</option>
+<option value="2">Acceso seguro mediante VPN o autenticación fuerte</option>
+</select>
+</div>
 
-        <div class="question">
-          <label>6. ¿La organización lleva control de software instalado, licencias activas y herramientas críticas utilizadas?</label>
-          <select id="p6">
-            <option value="0">No se controla</option>
-            <option value="1">Control parcial</option>
-            <option value="2">Control completo y documentado</option>
-          </select>
-        </div>
+<div class="question">
+<label>5. ¿Dónde se almacenan principalmente los datos de la empresa?</label>
+<select id="p5">
+<option value="0">Equipos locales sin respaldo</option>
+<option value="1">Nube o almacenamiento compartido sin controles avanzados</option>
+<option value="2">Nube segura o infraestructura con controles de seguridad</option>
+</select>
+</div>
 
-        <div class="question">
-          <label>7. ¿Se tienen identificados los datos sensibles o críticos del negocio (clientes, finanzas, contratos, bases de datos)?</label>
-          <select id="p7">
-            <option value="0">No identificados</option>
-            <option value="1">Identificados parcialmente</option>
-            <option value="2">Clasificados y priorizados</option>
-          </select>
-        </div>
+<div class="question">
+<label>6. ¿La empresa mantiene un inventario actualizado de sus activos tecnológicos?</label>
+<select id="p6">
+<option value="0">No existe inventario</option>
+<option value="1">Inventario parcial o desactualizado</option>
+<option value="2">Inventario completo y actualizado</option>
+</select>
+</div>
 
-        <div class="question">
-          <label>8. ¿La empresa ha identificado procesos críticos que no pueden detenerse (ventas, facturación, atención, producción, operación)?</label>
-          <select id="p8">
-            <option value="0">No</option>
-            <option value="1">Algunos procesos</option>
-            <option value="2">Sí, todos priorizados</option>
-          </select>
-        </div>
+<div class="question">
+<label>7. ¿Se tiene identificado quién utiliza cada equipo o sistema dentro de la empresa?</label>
+<select id="p7">
+<option value="0">No hay control de usuarios</option>
+<option value="1">Control parcial</option>
+<option value="2">Control completo de usuarios y accesos</option>
+</select>
+</div>
 
-        <div class="question">
-          <label>9. ¿Se realiza evaluación de riesgos tecnológicos como pérdida de datos, virus, robo de equipos o caídas del sistema?</label>
-          <select id="p9">
-            <option value="0">Nunca</option>
-            <option value="1">Ocasionalmente</option>
-            <option value="2">De forma periódica</option>
-          </select>
-        </div>
+<div class="question">
+<label>8. ¿La empresa ha identificado sus sistemas críticos (finanzas, clientes, operación)?</label>
+<select id="p8">
+<option value="0">No identificados</option>
+<option value="1">Identificación parcial</option>
+<option value="2">Totalmente identificados</option>
+</select>
+</div>
 
-        <div class="question">
-          <label>10. ¿La empresa evalúa riesgos asociados a terceros o proveedores tecnológicos (internet, software, nube, soporte externo)?</label>
-          <select id="p10">
-            <option value="0">No</option>
-            <option value="1">Solo algunos proveedores</option>
-            <option value="2">Sí, formalmente</option>
-          </select>
-        </div>
+<div class="question">
+<label>9. ¿Se gestionan y controlan los dispositivos móviles utilizados por empleados?</label>
+<select id="p9">
+<option value="0">No existe control</option>
+<option value="1">Control parcial (políticas básicas)</option>
+<option value="2">Gestión completa (MDM o controles definidos)</option>
+</select>
+</div>
 
-        <!-- PROTEGER -->
-        <div class="question">
-          <label>11. ¿Existe una política de contraseñas seguras (longitud mínima, cambios, no compartir, complejidad)?</label>
-          <select id="p11">
-            <option value="0">No existe</option>
-            <option value="1">Básica</option>
-            <option value="2">Formal y obligatoria</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>12. ¿Los accesos a carpetas, sistemas o plataformas están asignados según cargo y necesidad del usuario?</label>
-          <select id="p12">
-            <option value="0">No</option>
-            <option value="1">Parcialmente</option>
-            <option value="2">Sí, controlado por roles</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>13. ¿Todos los equipos cuentan con antivirus activo, actualizado y supervisado?</label>
-          <select id="p13">
-            <option value="0">No tienen</option>
-            <option value="1">Solo algunos equipos</option>
-            <option value="2">Todos protegidos</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>14. ¿El firewall, router o dispositivo de red tiene configuración segura y administración responsable?</label>
-          <select id="p14">
-            <option value="0">No configurado</option>
-            <option value="1">Configuración básica</option>
-            <option value="2">Gestionado profesionalmente</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>15. ¿La empresa realiza copias de seguridad de información importante y verifica su recuperación?</label>
-          <select id="p15">
-            <option value="0">No realiza copias</option>
-            <option value="1">Copias manuales ocasionales</option>
-            <option value="2">Copias automáticas verificadas</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>16. ¿Los colaboradores reciben capacitación para detectar fraudes, phishing y buenas prácticas digitales?</label>
-          <select id="p16">
-            <option value="0">Nunca</option>
-            <option value="1">Ocasionalmente</option>
-            <option value="2">Frecuente y programada</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>17. ¿Se mantienen actualizados sistemas operativos, aplicaciones y equipos frente a vulnerabilidades conocidas?</label>
-          <select id="p17">
-            <option value="0">No se controla</option>
-            <option value="1">A veces</option>
-            <option value="2">Proceso definido</option>
-          </select>
-        </div>
-
-        <div class="question">
-          <label>18. ¿El correo empresarial cuenta con medidas de seguridad como filtros, MFA o protección anti-spam?</label>
-          <select id="p18">
-            <option value="0">Correo básico sin protección</option>
-            <option value="1">Protección parcial</option>
-            <option value="2">Protección avanzada</option>
-          </select>
-        </div>
-
-      </div>
-
-      <button onclick="guardar()" class="send-btn">
-        Enviar diagnóstico
-      </button>
-
-    </section>
-
-  </div>
+<div class="question">
+<label>10. ¿Se controla el software instalado en los equipos de la empresa?</label>
+<select id="p10">
+<option value="0">No hay control</option>
+<option value="1">Control parcial</option>
+<option value="2">Control total (software autorizado y monitoreado)</option>
+</select>
+</div>
 
 
-  <!-- MODULOS PREMIUM -->
+<!-- ================= ISO 27032 (TUS PREGUNTAS) ================= -->
+<h3>Auditoría ISO 27032</h3>
+
+<!-- Gobernanza -->
+<div class="question"><label>11. ¿La política de seguridad incluye la seguridad en Internet como parte de la estrategia?</label>
+<select id="p11"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>12. ¿Los controles de seguridad web están integrados a la estrategia general?</label>
+<select id="p12"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>13. ¿Existen roles definidos para seguridad en Internet?</label>
+<select id="p13"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>14. ¿Existen políticas para confidencialidad, integridad y disponibilidad?</label>
+<select id="p14"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>15. ¿Se identifican requisitos legales en operaciones en Internet?</label>
+<select id="p15"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<!-- Riesgos -->
+<div class="question"><label>16. ¿Se identifican vectores de ataque como IoT o móviles?</label>
+<select id="p16"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>17. ¿Se consideran amenazas como ingeniería social o día cero?</label>
+<select id="p17"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>18. ¿Se detectan posibles botnets internas?</label>
+<select id="p18"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>19. ¿Se contemplan ataques combinados?</label>
+<select id="p19"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>20. ¿Existen controles contra sitios comprometidos (waterhole)?</label>
+<select id="p20"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<!-- Controles -->
+<div class="question"><label>21. ¿Se gestionan los accesos a sistemas expuestos?</label>
+<select id="p21"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>22. ¿Existe gestión de vulnerabilidades?</label>
+<select id="p22"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>23. ¿Se protege contra malware?</label>
+<select id="p23"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>24. ¿Se previene spyware?</label>
+<select id="p24"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>25. ¿Se usa cifrado en información sensible?</label>
+<select id="p25"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>26. ¿Se aplican prácticas seguras en desarrollo?</label>
+<select id="p26"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>27. ¿Se protegen dispositivos finales?</label>
+<select id="p27"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>28. ¿La red está configurada de forma segura?</label>
+<select id="p28"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>29. ¿Se filtra spam?</label>
+<select id="p29"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>30. ¿Se monitorea la dark web?</label>
+<select id="p30"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<!-- Incidentes -->
+<div class="question"><label>31. ¿Existe equipo de respuesta a incidentes?</label>
+<select id="p31"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>32. ¿Se monitorea en tiempo real?</label>
+<select id="p32"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>33. ¿Existe plan contra DDoS?</label>
+<select id="p33"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>34. ¿Se gestionan incidentes de phishing?</label>
+<select id="p34"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>35. ¿Existe plan de continuidad?</label>
+<select id="p35"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<!-- Personas -->
+<div class="question"><label>36. ¿Se capacita a los empleados en ciberseguridad?</label>
+<select id="p36"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>37. ¿Se evalúan proveedores?</label>
+<select id="p37"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>38. ¿Se protege la información personal?</label>
+<select id="p38"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>39. ¿Existe coordinación con entidades externas?</label>
+<select id="p39"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+
+<div class="question"><label>40. ¿Se aplica mejora continua?</label>
+<select id="p40"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+</div>
+
+<button onclick="guardar()" class="send-btn">Enviar diagnóstico</button>
+
+</section>
+
+</div>
+<!-- MODULOS PREMIUM -->
   <section class="premium-section">
 
     <h2>Módulos de Conocimiento</h2>
@@ -305,7 +297,6 @@
   </section>
 
 </main>
-
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
