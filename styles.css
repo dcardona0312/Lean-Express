@@ -61,7 +61,7 @@ body {
 .service h3 {
   margin: 0;
   font-size: 16px;
-  color: #0f172a;
+  color: #0f2a20;
 }
 
 .service p {
@@ -73,7 +73,7 @@ body {
 /* LOGIN */
 .login-card {
   width: 420px;
-  background: linear-gradient(180deg, #0f172a, #020617);
+  background: linear-gradient(180deg, #0a8045, #020617);
   display: flex;
   justify-content: center;
   align-items: center;
