@@ -7,15 +7,17 @@ window.addEventListener("load", () => {
   }
 
   auth.onAuthStateChanged(user => {
+
     if (!user) {
       window.location.href = "../index.html";
     }
+
   });
 
 });
 
 
-// 🔥 GUARDAR DIAGNÓSTICO (CON NOMBRE EMPRESA)
+// 🔥 GUARDAR DIAGNÓSTICO
 function guardar(){
 
   try {
@@ -24,7 +26,8 @@ function guardar(){
     let parciales = 0;
     let noImplementados = 0;
 
-    for(let i = 1; i <= 40; i++){
+    // 🔹 RECORRER 30 PREGUNTAS
+    for(let i = 1; i <= 30; i++){
 
       const val = parseInt(document.getElementById("p" + i).value);
 
@@ -33,26 +36,60 @@ function guardar(){
         return;
       }
 
-      if(val === 2) implementados++;
-      else if(val === 1) parciales++;
-      else noImplementados++;
+      if(val === 2){
+        implementados++;
+      }
+      else if(val === 1){
+        parciales++;
+      }
+      else{
+        noImplementados++;
+      }
+
     }
 
-    // 🔹 ESTADO
-    let estado = "Deficiente";
-    if(implementados > 25) estado = "Implementado";
-    else if(implementados > 15) estado = "Parcial";
+    // 🔥 ESTADO GENERAL
+    let estado = "Crítico";
 
-    // 🔹 RIESGO
+    if(implementados >= 24){
+      estado = "Óptimo";
+    }
+    else if(implementados >= 16){
+      estado = "Aceptable";
+    }
+    else if(implementados >= 10){
+      estado = "En desarrollo";
+    }
+
+    // 🔥 RIESGO
     let riesgo = "Alto";
-    if(noImplementados < 10) riesgo = "Bajo";
-    else if(noImplementados < 20) riesgo = "Medio";
 
-    // 🔹 PROMEDIOS
-    const contexto = promedio(1, 10);
-    const identificar = promedio(11, 25);
-    const proteger = promedio(26, 40);
+    if(noImplementados <= 5){
+      riesgo = "Bajo";
+    }
+    else if(noImplementados <= 12){
+      riesgo = "Medio";
+    }
 
+    // 🔥 INDICADORES LEAN
+    const eficiencia = Math.round((implementados / 30) * 100);
+
+    const desperdicio = Math.round((noImplementados / 30) * 100);
+
+    const madurez = Math.round(((implementados + parciales) / 60) * 100);
+
+    // 🔥 PROMEDIOS POR CATEGORÍA
+    const estrategia = promedio(1, 6);
+
+    const operacion = promedio(7, 12);
+
+    const recursos = promedio(13, 18);
+
+    const sst = promedio(19, 24);
+
+    const mejora = promedio(25, 30);
+
+    // 🔥 USUARIO
     const user = auth.currentUser;
 
     if(!user){
@@ -60,23 +97,25 @@ function guardar(){
       return;
     }
 
-    // 🔥 OBTENER NOMBRE DESDE FIRESTORE
+    // 🔥 OBTENER EMPRESA
     db.collection("usuarios")
       .doc(user.uid)
       .get()
+
       .then(doc => {
 
         if(!doc.exists){
-          alert("No se encontró el usuario en Firestore");
+          alert("No se encontró información de la empresa");
           return;
         }
 
         const nombreEmpresa = doc.data().nombre || user.email;
 
-        // 🔥 GUARDAR DIAGNÓSTICO
+        // 🔥 GUARDAR EN FIRESTORE
         return db.collection("diagnosticos").add({
-          usuario: nombreEmpresa,   // 🔥 AHORA ES NOMBRE
-          email: user.email,        // opcional (para trazabilidad)
+
+          usuario: nombreEmpresa,
+          email: user.email,
 
           estado,
           riesgo,
@@ -85,53 +124,83 @@ function guardar(){
           parciales,
           noImplementados,
 
-          contexto,
-          identificar,
-          proteger,
+          eficiencia,
+          desperdicio,
+          madurez,
+
+          estrategia,
+          operacion,
+          recursos,
+          sst,
+          mejora,
 
           fecha: new Date()
+
         });
 
       })
+
       .then(() => {
-        alert("Diagnóstico guardado correctamente ✅");
+
+        alert("Diagnóstico enviado correctamente ✅");
+
       })
+
       .catch(err => {
+
         console.error(err);
         alert("Error al guardar diagnóstico");
+
       });
 
-  } catch (error) {
+  }
+
+  catch(error){
+
     console.error(error);
     alert("Error general");
+
   }
 
 }
 
 
-// 🔧 PROMEDIO
+// 🔥 CALCULAR PROMEDIOS
 function promedio(inicio, fin){
 
   let suma = 0;
 
   for(let i = inicio; i <= fin; i++){
-    suma += parseInt(document.getElementById("p" + i).value);
+
+    suma += parseInt(
+      document.getElementById("p" + i).value
+    );
+
   }
 
-  return Math.round((suma / ((fin - inicio + 1) * 2)) * 100);
+  return Math.round(
+    (suma / ((fin - inicio + 1) * 2)) * 100
+  );
+
 }
 
 
-// 🚪 LOGOUT
+// 🚪 CERRAR SESIÓN
 function logout(){
 
   auth.signOut()
+
     .then(() => {
+
       window.location.href = "../index.html";
+
     })
+
     .catch(err => {
+
       console.error(err);
       alert("Error al cerrar sesión");
+
     });
 
 }

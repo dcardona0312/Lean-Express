@@ -2,301 +2,410 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>CyberPyme - Empresa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lean Express - Diagnóstico Empresarial</title>
 <link rel="stylesheet" href="preguntas.css">
 </head>
 
 <body>
 
 <header class="topbar">
+
   <div class="brand">
-    <img src="../LogoCyberpyme.png" class="logo">
+    <img src="Logo_Lean_Express-removebg-preview.png" class="logo">
+
     <div>
-      <h2>CyberPyme</h2>
-      <span>Portal Empresarial</span>
+      <h2>Lean Express</h2>
+      <span>Portal Empresarial Inteligente</span>
     </div>
   </div>
 
-  <button onclick="logout()" class="logout-btn">Cerrar sesión</button>
+  <button onclick="logout()" class="logout-btn">
+    Cerrar sesión
+  </button>
+
 </header>
 
 <main class="main">
 
 <div class="wrapper">
 
-<!-- IZQUIERDA -->
+<!-- PANEL IZQUIERDO -->
 <section class="intro-card">
 
-<h1>Diagnóstico de Ciberseguridad</h1>
+<h1>Diagnóstico Organizacional Inteligente</h1>
 
 <p>
-Evaluación basada en ISO 27032 enfocada en contexto, identificación y protección.
+Evalúa el estado actual de tu empresa mediante estándares ISO 9001:2015,
+Resolución 0312 de 2019 y principios Lean enfocados en eficiencia,
+reducción de desperdicios y mejora continua.
 </p>
 
 <div class="tips">
-<div class="tip"><h3>Contexto</h3><span>Activos y operación</span></div>
-<div class="tip"><h3>Identificar</h3><span>Riesgos y amenazas</span></div>
-<div class="tip"><h3>Proteger</h3><span>Controles de seguridad</span></div>
+
+  <div class="tip">
+    <h3>Estrategia</h3>
+    <span>Dirección y liderazgo</span>
+  </div>
+
+  <div class="tip">
+    <h3>Operación</h3>
+    <span>Procesos y productividad</span>
+  </div>
+
+  <div class="tip">
+    <h3>Recursos</h3>
+    <span>Infraestructura y talento</span>
+  </div>
+
+  <div class="tip">
+    <h3>SST Legal</h3>
+    <span>Seguridad y cumplimiento</span>
+  </div>
+
+  <div class="tip">
+    <h3>Mejora Continua</h3>
+    <span>Optimización organizacional</span>
+  </div>
+
 </div>
 
 </section>
 
 
-<!-- DERECHA -->
+<!-- PANEL DERECHO -->
 <section class="form-card">
 
 <h2>Responder diagnóstico</h2>
 
 <div class="questions-box">
 
-<!-- ================= CONTEXTO EMPRESA ================= -->
-<h3>Contexto Empresarial y Activos</h3>
+<!-- ================= ESTRATEGIA ================= -->
+<h3>Estrategia</h3>
 
 <div class="question">
-<label>1. ¿Cuál es el tamaño de la empresa en términos de usuarios que acceden a sistemas tecnológicos?</label>
+<label>1. ¿Tiene la empresa identificados los factores externos e internos que afectan su rentabilidad?</label>
+<p class="why">💡 Permite tomar decisiones basadas en datos reales y evitar desperdicios operativos.</p>
 <select id="p1">
-<option value="0">Menos de 5 usuarios</option>
-<option value="1">Entre 5 y 20 usuarios</option>
-<option value="2">Más de 20 usuarios</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
 <div class="question">
-<label>2. ¿Cuántos dispositivos tecnológicos (PC, laptops, móviles) están en uso activo?</label>
+<label>2. ¿Están definidos los procesos principales de la empresa?</label>
+<p class="why">💡 La estandarización reduce errores y tiempos improductivos.</p>
 <select id="p2">
-<option value="0">Menos de 5</option>
-<option value="1">Entre 5 y 15</option>
-<option value="2">Más de 15</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
 <div class="question">
-<label>3. ¿Qué tipo de infraestructura de red utiliza la empresa para sus operaciones?</label>
+<label>3. ¿Existe una política de calidad conocida por el personal?</label>
+<p class="why">💡 Ayuda a alinear los objetivos empresariales y evitar reprocesos.</p>
 <select id="p3">
-<option value="0">Red doméstica o sin segmentación</option>
-<option value="1">Red empresarial básica (WiFi + cable)</option>
-<option value="2">Red administrada con segmentación (VLAN, firewall, etc.)</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
 <div class="question">
-<label>4. ¿Cómo se gestiona el acceso remoto a los sistemas de la empresa?</label>
+<label>4. ¿Las responsabilidades de cada cargo están claramente definidas?</label>
+<p class="why">💡 Evita duplicidad de funciones y pérdida de productividad.</p>
 <select id="p4">
-<option value="0">Sin control o acceso libre</option>
-<option value="1">Acceso con credenciales básicas</option>
-<option value="2">Acceso seguro mediante VPN o autenticación fuerte</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
 <div class="question">
-<label>5. ¿Dónde se almacenan principalmente los datos de la empresa?</label>
+<label>5. ¿La gerencia realiza seguimiento periódico al desempeño del negocio?</label>
+<p class="why">💡 Permite detectar desviaciones antes de generar pérdidas.</p>
 <select id="p5">
-<option value="0">Equipos locales sin respaldo</option>
-<option value="1">Nube o almacenamiento compartido sin controles avanzados</option>
-<option value="2">Nube segura o infraestructura con controles de seguridad</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
 <div class="question">
-<label>6. ¿La empresa mantiene un inventario actualizado de sus activos tecnológicos?</label>
+<label>6. ¿La empresa utiliza indicadores para medir resultados?</label>
+<p class="why">💡 Lo que no se mide no puede mejorarse.</p>
 <select id="p6">
-<option value="0">No existe inventario</option>
-<option value="1">Inventario parcial o desactualizado</option>
-<option value="2">Inventario completo y actualizado</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
+<!-- ================= OPERACION ================= -->
+<h3>Operación</h3>
+
 <div class="question">
-<label>7. ¿Se tiene identificado quién utiliza cada equipo o sistema dentro de la empresa?</label>
+<label>7. ¿Existe un método para identificar riesgos operativos?</label>
+<p class="why">💡 Reduce pérdidas económicas por fallos inesperados.</p>
 <select id="p7">
-<option value="0">No hay control de usuarios</option>
-<option value="1">Control parcial</option>
-<option value="2">Control completo de usuarios y accesos</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
 <div class="question">
-<label>8. ¿La empresa ha identificado sus sistemas críticos (finanzas, clientes, operación)?</label>
+<label>8. ¿Los procesos de producción o servicio están estandarizados?</label>
+<p class="why">💡 Garantiza resultados consistentes y menos desperdicio.</p>
 <select id="p8">
-<option value="0">No identificados</option>
-<option value="1">Identificación parcial</option>
-<option value="2">Totalmente identificados</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
 <div class="question">
-<label>9. ¿Se gestionan y controlan los dispositivos móviles utilizados por empleados?</label>
+<label>9. ¿La capacidad operativa cubre adecuadamente la demanda actual?</label>
+<p class="why">💡 Evita saturación y retrasos productivos.</p>
 <select id="p9">
-<option value="0">No existe control</option>
-<option value="1">Control parcial (políticas básicas)</option>
-<option value="2">Gestión completa (MDM o controles definidos)</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
 <div class="question">
-<label>10. ¿Se controla el software instalado en los equipos de la empresa?</label>
+<label>10. ¿Se realiza seguimiento y medición de los procesos?</label>
+<p class="why">💡 Permite identificar cuellos de botella y mejorar eficiencia.</p>
 <select id="p10">
-<option value="0">No hay control</option>
-<option value="1">Control parcial</option>
-<option value="2">Control total (software autorizado y monitoreado)</option>
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
 </select>
 </div>
 
+<div class="question">
+<label>11. ¿Se evalúan proveedores bajo criterios de calidad?</label>
+<p class="why">💡 Reduce riesgos por incumplimientos externos.</p>
+<select id="p11">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<!-- ================= ISO 27032 (TUS PREGUNTAS) ================= -->
-<h3>Auditoría ISO 27032</h3>
+<div class="question">
+<label>12. ¿Existe control sobre productos o servicios con errores?</label>
+<p class="why">💡 Evita reprocesos y pérdida de clientes.</p>
+<select id="p12">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<!-- Gobernanza -->
-<div class="question"><label>11. ¿La política de seguridad incluye la seguridad en Internet como parte de la estrategia?</label>
-<select id="p11"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<!-- ================= RECURSOS ================= -->
+<h3>Recursos</h3>
 
-<div class="question"><label>12. ¿Los controles de seguridad web están integrados a la estrategia general?</label>
-<select id="p12"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>13. ¿La empresa cuenta con infraestructura adecuada?</label>
+<p class="why">💡 Mejora productividad y reduce tiempos muertos.</p>
+<select id="p13">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>13. ¿Existen roles definidos para seguridad en Internet?</label>
-<select id="p13"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>14. ¿El personal recibe capacitaciones periódicas?</label>
+<p class="why">💡 Disminuye errores y aumenta eficiencia operativa.</p>
+<select id="p14">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>14. ¿Existen políticas para confidencialidad, integridad y disponibilidad?</label>
-<select id="p14"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>15. ¿Existe control sobre documentos y registros?</label>
+<p class="why">💡 Evita inconsistencias y pérdida de información crítica.</p>
+<select id="p15">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>15. ¿Se identifican requisitos legales en operaciones en Internet?</label>
-<select id="p15"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>16. ¿Se gestionan correctamente los recursos tecnológicos?</label>
+<p class="why">💡 Reduce desperdicio y fallos operativos.</p>
+<select id="p16">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<!-- Riesgos -->
-<div class="question"><label>16. ¿Se identifican vectores de ataque como IoT o móviles?</label>
-<select id="p16"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>17. ¿Se planifican adecuadamente los cambios organizacionales?</label>
+<p class="why">💡 Minimiza impactos negativos en productividad.</p>
+<select id="p17">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>17. ¿Se consideran amenazas como ingeniería social o día cero?</label>
-<select id="p17"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>18. ¿La empresa identifica oportunidades de mejora en el mercado?</label>
+<p class="why">💡 Permite crecer aprovechando capacidades actuales.</p>
+<select id="p18">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>18. ¿Se detectan posibles botnets internas?</label>
-<select id="p18"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<!-- ================= SST ================= -->
+<h3>SST y Legal</h3>
 
-<div class="question"><label>19. ¿Se contemplan ataques combinados?</label>
-<select id="p19"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>19. ¿Existe un responsable del SG-SST?</label>
+<p class="why">💡 Garantiza cumplimiento legal y prevención de riesgos.</p>
+<select id="p19">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>20. ¿Existen controles contra sitios comprometidos (waterhole)?</label>
-<select id="p20"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>20. ¿Todos los trabajadores están afiliados a seguridad social?</label>
+<p class="why">💡 Reduce riesgos legales y protege al trabajador.</p>
+<select id="p20">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<!-- Controles -->
-<div class="question"><label>21. ¿Se gestionan los accesos a sistemas expuestos?</label>
-<select id="p21"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>21. ¿Existe un plan anual de SST?</label>
+<p class="why">💡 Permite planificar acciones preventivas eficientemente.</p>
+<select id="p21">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>22. ¿Existe gestión de vulnerabilidades?</label>
-<select id="p22"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>22. ¿Se realizan capacitaciones en seguridad laboral?</label>
+<p class="why">💡 Disminuye accidentes y pérdidas operativas.</p>
+<select id="p22">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>23. ¿Se protege contra malware?</label>
-<select id="p23"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>23. ¿Existe matriz de riesgos actualizada?</label>
+<p class="why">💡 Permite priorizar controles y reducir incidentes.</p>
+<select id="p23">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>24. ¿Se previene spyware?</label>
-<select id="p24"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>24. ¿La empresa cuenta con plan de emergencias?</label>
+<p class="why">💡 Reduce impacto operativo ante eventos críticos.</p>
+<select id="p24">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>25. ¿Se usa cifrado en información sensible?</label>
-<select id="p25"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<!-- ================= MEJORA ================= -->
+<h3>Mejora Continua</h3>
 
-<div class="question"><label>26. ¿Se aplican prácticas seguras en desarrollo?</label>
-<select id="p26"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>25. ¿Se mide la satisfacción del cliente?</label>
+<p class="why">💡 Ayuda a detectar oportunidades de mejora.</p>
+<select id="p25">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>27. ¿Se protegen dispositivos finales?</label>
-<select id="p27"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>26. ¿Se realizan auditorías internas?</label>
+<p class="why">💡 Permite detectar incumplimientos y fallos internos.</p>
+<select id="p26">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>28. ¿La red está configurada de forma segura?</label>
-<select id="p28"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>27. ¿Se analizan las causas raíz de los errores?</label>
+<p class="why">💡 Evita repetir problemas operativos constantemente.</p>
+<select id="p27">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>29. ¿Se filtra spam?</label>
-<select id="p29"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>28. ¿Se implementan acciones correctivas?</label>
+<p class="why">💡 Mejora continuamente la eficiencia empresarial.</p>
+<select id="p28">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>30. ¿Se monitorea la dark web?</label>
-<select id="p30"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>29. ¿La empresa utiliza el ciclo PHVA?</label>
+<p class="why">💡 Facilita mejora continua y control organizacional.</p>
+<select id="p29">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<!-- Incidentes -->
-<div class="question"><label>31. ¿Existe equipo de respuesta a incidentes?</label>
-<select id="p31"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
+<div class="question">
+<label>30. ¿La organización evidencia mejoras en productividad y eficiencia?</label>
+<p class="why">💡 Refleja madurez organizacional y sostenibilidad.</p>
+<select id="p30">
+<option value="0">No implementado</option>
+<option value="1">Parcialmente implementado</option>
+<option value="2">Implementado</option>
+</select>
+</div>
 
-<div class="question"><label>32. ¿Se monitorea en tiempo real?</label>
-<select id="p32"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
-
-<div class="question"><label>33. ¿Existe plan contra DDoS?</label>
-<select id="p33"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
-
-<div class="question"><label>34. ¿Se gestionan incidentes de phishing?</label>
-<select id="p34"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
-
-<div class="question"><label>35. ¿Existe plan de continuidad?</label>
-<select id="p35"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
-
-<!-- Personas -->
-<div class="question"><label>36. ¿Se capacita a los empleados en ciberseguridad?</label>
-<select id="p36"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
-
-<div class="question"><label>37. ¿Se evalúan proveedores?</label>
-<select id="p37"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
-
-<div class="question"><label>38. ¿Se protege la información personal?</label>
-<select id="p38"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
-
-<div class="question"><label>39. ¿Existe coordinación con entidades externas?</label>
-<select id="p39"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
-
-<div class="question"><label>40. ¿Se aplica mejora continua?</label>
-<select id="p40"><option value="0">No</option><option value="1">Parcial</option><option value="2">Sí</option></select></div>
 </div>
 
 <button onclick="guardar()" class="send-btn">Enviar diagnóstico</button>
 
+
 </section>
 
 </div>
-<!-- MODULOS PREMIUM -->
-  <section class="premium-section">
-
-    <h2>Módulos de Conocimiento</h2>
-
-    <p>
-      Próximamente podrás acceder a formación especializada para fortalecer la seguridad de tu empresa.
-    </p>
-
-    <div class="premium-grid">
-
-      <div class="premium-card">
-        <h3>Fundamentos de Ciberseguridad</h3>
-        <span>🔒 Premium</span>
-      </div>
-
-      <div class="premium-card">
-        <h3>Protección contra Phishing</h3>
-        <span>🔒 Premium</span>
-      </div>
-
-      <div class="premium-card">
-        <h3>Seguridad WiFi Empresarial</h3>
-        <span>🔒 Premium</span>
-      </div>
-
-      <div class="premium-card">
-        <h3>Backups Inteligentes</h3>
-        <span>🔒 Premium</span>
-      </div>
-
-      <div class="premium-card">
-        <h3>Protección de Datos</h3>
-        <span>🔒 Premium</span>
-      </div>
-
-      <div class="premium-card">
-        <h3>Buenas Prácticas NIST</h3>
-        <span>🔒 Premium</span>
-      </div>
-
-    </div>
-
-    <button class="premium-btn">
-      Solicitar acceso premium
-    </button>
-
-  </section>
 
 </main>
+
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
