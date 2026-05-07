@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: #f4f6f9;
+  overflow: hidden;
 }
 
 /* LAYOUT */
@@ -10,11 +11,11 @@ body {
   height: 100vh;
 }
 
-/* LADO IZQUIERDO */
+/* PANEL IZQUIERDO */
 .info {
   flex: 1;
-  padding: 60px;
-  background: #ffffff;
+  padding: 35px 45px;
+  background: linear-gradient(180deg, #ffffff, #f8fafc);
   overflow-y: auto;
 }
 
@@ -22,109 +23,222 @@ body {
 .logo-container {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .logo {
-  width: 420px;
+  width: 350px;
   max-width: 100%;
+  filter: drop-shadow(0 8px 20px rgba(0,0,0,0.08));
 }
 
-/* TEXTO */
+/* SUBTITULO */
 .subtitle {
   text-align: center;
-  color: #475569;
-  max-width: 600px;
-  margin: 0 auto 40px;
+  color: #64748b;
+  max-width: 550px;
+  margin: 0 auto 30px;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
-/* SERVICIOS */
+/* GRID */
 .services {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 18px;
 }
 
+/* TARJETAS */
 .service {
-  padding: 20px;
-  border-radius: 8px;
+  position: relative;
+  padding: 22px;
+  border-radius: 16px;
   background: #ffffff;
   border: 1px solid #e2e8f0;
-  transition: 0.2s;
+  transition: all 0.25s ease;
+  box-shadow:
+    0 3px 10px rgba(0,0,0,0.03);
 }
 
+/* BARRA SUPERIOR */
+.service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-radius: 16px 16px 0 0;
+  background: linear-gradient(90deg, #0a8045, #22c55e);
+}
+
+/* HOVER */
 .service:hover {
-  transform: translateY(-3px);
-  border-color: #94a3b8;
+  transform: translateY(-4px);
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.06);
 }
 
+/* TITULOS */
 .service h3 {
-  margin: 0;
-  font-size: 16px;
-  color: #0f2a20;
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: #0f172a;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
+/* ICONOS */
+.service:nth-child(1) h3::before {
+  content: "🎯";
+}
+
+.service:nth-child(2) h3::before {
+  content: "🚀";
+}
+
+.service:nth-child(3) h3::before {
+  content: "💡";
+}
+
+.service:nth-child(4) h3::before {
+  content: "📞";
+}
+
+/* TEXTO */
 .service p {
-  margin-top: 8px;
-  font-size: 14px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
   color: #64748b;
+  text-align: justify;
 }
 
 /* LOGIN */
 .login-card {
-  width: 420px;
+  width: 380px;
   background: linear-gradient(180deg, #0a8045, #020617);
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* EFECTOS */
+.login-card::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 50%;
+  top: -80px;
+  right: -80px;
+}
+
+.login-card::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 50%;
+  bottom: -60px;
+  left: -60px;
 }
 
 /* CONTENIDO LOGIN */
 .login-content {
   width: 80%;
-  max-width: 320px;
+  max-width: 300px;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
-/* TITULO */
+/* TITULO LOGIN */
 .login-content h2 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 5px;
+  font-weight: 700;
 }
 
-/* SUBTEXTO */
+/* SUB LOGIN */
 .login-sub {
-  color: #94a3b8;
-  font-size: 14px;
-  margin-bottom: 30px;
+  color: #cbd5e1;
+  font-size: 13px;
+  margin-bottom: 28px;
 }
 
 /* INPUTS */
 input {
   width: 100%;
-  padding: 14px;
+  padding: 13px;
   margin: 10px 0;
-  border-radius: 8px;
+  border-radius: 10px;
   border: none;
   outline: none;
-  background: #f1f5f9;
+  background: rgba(255,255,255,0.92);
   color: #0f172a;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: 0.25s ease;
 }
 
-/* BOTÓN */
+input:focus {
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.25);
+}
+
+/* BOTON */
 button {
   width: 100%;
-  padding: 14px;
+  padding: 13px;
   margin-top: 15px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   background: linear-gradient(90deg, #2563eb, #3b82f6);
   color: white;
   font-weight: 600;
+  font-size: 14px;
   cursor: pointer;
+  transition: 0.25s ease;
 }
 
 button:hover {
-  transform: scale(1.03);
+  transform: scale(1.02);
+  box-shadow: 0 8px 18px rgba(37,99,235,0.25);
+}
+
+/* RESPONSIVE */
+@media (max-width: 1000px) {
+
+  body {
+    overflow: auto;
+  }
+
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card {
+    width: 100%;
+    min-height: 420px;
+  }
+
+  .info {
+    padding: 30px 20px;
+  }
+
 }
